@@ -10,7 +10,7 @@
     "typescript": "^3.5.1"
   },
   "scripts": {
-    "test": "jest",
-    "test:inspect": "node --inspect-brk=40037 node_modules/.bin/jest"
+    "test": "node node_modules/.bin/jest",
+    "test:inspect": "node --inspect node_modules/.bin/jest"
   }
 }
