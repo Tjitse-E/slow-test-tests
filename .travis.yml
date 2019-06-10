@@ -1,0 +1,23 @@
+sudo: required
+language: node_js
+node_js: "10"
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+install:
+- yarn
+
+jobs:
+  include:
+  - stage: Build
+    name: Build without inspect
+    script:
+    - yarn test
+
+  - stage: Build
+    name: Build with inspect
+    script:
+    - yarn test:inspect
